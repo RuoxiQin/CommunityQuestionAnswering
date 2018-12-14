@@ -99,3 +99,9 @@ One of the model is shown in Figure 2.
 To run train and test this model, simply run ``bidirectionalLSTM_wlen_share_lastlayer_dropout.ipynb``.
 We observe the performance MAP: 72.45% and MRR: 80.40% from our experiment.
 If we further fine-tune this model, it may achieve better performance.
+
+## References
+
+[1] Nakov Preslav, Marquesz Lluis, Moschittim Alessan- dro, Magdy Walid, Mubarak Hamdy, Freihat, and Abed Alhakim. 2016. Semeval-2016 task 3: Com- munity question answering. In _Semantic Evaluation 2016_. Proceedings of the 10th International Work- shop on Semantic Evaluation.
+
+[2] Henry Nassif, Mitra Mohtarami, and James Glass. 2016. Learning semantic relatedness in commu- nity question answering using neural models. In _Proceedings of the 1st Workshop on Representation Learning for NLP_, pages 137–147.
