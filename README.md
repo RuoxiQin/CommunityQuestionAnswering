@@ -75,9 +75,27 @@ In our experiment, the MAP achieved is 74.43% and the MRR is 84.04%.
 Even though the basic BLSTM model achieves satisfied performance.
 It's very complex and costs a long time to train.
 Thus we built an optimized model as shown in Figure 1.
+
 ![Figure 1](img/optimize_model.jpg "Optimized model structure")
+*Figure 1. Optimized model structure*
 
-To run this model,
+Since we use the ``dynamic_lstm`` is this optimized model, we need the real length of each question/comment as input.
+So we need to do the preprocessing again by running ``text2vec_qa_with_len.ipynb``.
+It will generate the training data ``cQA_train_embedding_wlen.npz`` and testing data ``cQA_test_embedding_wlen.npz``.
 
+Then run the ``bidirectionalLSTM_wlen_conc_dropout.ipynb`` to train and evaluate the model.
 
+Our experiment shows a performance as MAP: 74.52% and MRR: 82.15%.
+Notice that there isn't any performance drop by simplifying the model.
+In addition, since our optimized model uses much fewer parameters and skips the unnecessary computations, the training speed is improved significantly.
+The experiment shows a 15% speed boost compared to our original model.
 
+## Other Attempts
+
+The models above are the optimal models we find.
+We also try other models and achieves similar performance.
+One of the model is shown in Figure 2.
+
+To run train and test this model, simply run ``bidirectionalLSTM_wlen_share_lastlayer_dropout.ipynb``.
+We observe the performance MAP: 72.45% and MRR: 80.40% from our experiment.
+If we further fine-tune this model, it may achieve better performance.
