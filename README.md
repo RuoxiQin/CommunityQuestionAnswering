@@ -75,6 +75,9 @@ In our experiment, the MAP achieved is 74.43% and the MRR is 84.04%.
 Even though the basic BLSTM model achieves satisfied performance.
 It's very complex and costs a long time to train.
 Thus we built an optimized model as shown in Figure 1.
+![Figure 1](img/optimize_model.jpg "Optimized model structure")
+
+To run this model,
 
 
 
