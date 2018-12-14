@@ -96,6 +96,9 @@ The models above are the optimal models we find.
 We also try other models and achieves similar performance.
 One of the model is shown in Figure 2.
 
+![Figure 1](img/independent_lstm_model.jpg "Independent LSTM model")
+*Figure 2. Another model addressing the Answer Selection task*
+
 To run train and test this model, simply run ``bidirectionalLSTM_wlen_share_lastlayer_dropout.ipynb``.
 We observe the performance MAP: 72.45% and MRR: 80.40% from our experiment.
 If we further fine-tune this model, it may achieve better performance.
